@@ -5,14 +5,12 @@ import org.kohsuke.stapler.DataBoundConstructor;
 
 public class GitBranchTagParameterValue extends ParameterValue {
     private String name;
-    private String repository;
-    private String additional;
+    private String value;
 
     @DataBoundConstructor
-    public GitBranchTagParameterValue(String name, String repository, String additional) {
+    public GitBranchTagParameterValue(String name, String value) {
         super(name);
         this.name = name;
-        this.repository = repository;
-        this.additional = additional;
+        this.value = value;
     }
 }
