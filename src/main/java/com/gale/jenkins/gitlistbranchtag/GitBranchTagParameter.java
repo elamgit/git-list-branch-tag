@@ -6,9 +6,6 @@ import net.sf.json.JSONObject;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.StaplerRequest;
 
-/**
- * Created by eannamal on 12/17/16.
- */
 public class GitBranchTagParameter extends ParameterDefinition {
 
     private String name;
