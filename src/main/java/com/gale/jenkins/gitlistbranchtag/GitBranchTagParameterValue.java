@@ -1,6 +1,5 @@
 package com.gale.jenkins.gitlistbranchtag;
 
-import hudson.model.ParameterValue;
 import hudson.model.StringParameterValue;
 import org.kohsuke.stapler.DataBoundConstructor;
 

@@ -10,10 +10,8 @@ import org.kohsuke.stapler.AncestorInPath;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
 import org.kohsuke.stapler.StaplerRequest;
-import org.kohsuke.stapler.export.Model;
 
 import java.io.IOException;
-import java.util.Map;
 
 public class GitBranchTagParameterDefinition extends ParameterDefinition {
 
@@ -27,7 +25,6 @@ public class GitBranchTagParameterDefinition extends ParameterDefinition {
         this.name = name;
         this.repository = repository;
         this.additional = additional;
-        System.err.println("in constructor");
     }
 
 
@@ -75,7 +72,11 @@ public class GitBranchTagParameterDefinition extends ParameterDefinition {
         public ListBoxModel doFillValueItems(@AncestorInPath Job job, @QueryParameter String param)
                 throws IOException, InterruptedException {
             ListBoxModel items = new ListBoxModel();
+            ParametersDefinitionProperty property = (ParametersDefinitionProperty) job.getProperty(ParametersDefinitionProperty.class);
+            property.getParameterDefinition("appLabel");
             items.add("master", "master");
+            ListBoxModel.Option option = new ListBoxModel.Option("release","release",true);
+            items.add(1,option);
             return items;
         }
     }
