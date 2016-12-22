@@ -72,8 +72,8 @@ public class GitBranchTagParameterDefinition extends ParameterDefinition {
         public ListBoxModel doFillValueItems(@AncestorInPath Job job, @QueryParameter String param)
                 throws IOException, InterruptedException {
             ListBoxModel items = new ListBoxModel();
-            ParametersDefinitionProperty property = (ParametersDefinitionProperty) job.getProperty(ParametersDefinitionProperty.class);
-            property.getParameterDefinition("appLabel");
+//            ParametersDefinitionProperty property = (ParametersDefinitionProperty) job.getProperty(ParametersDefinitionProperty.class);
+//            property.getParameterDefinition("appLabel");
             items.add("master", "master");
             ListBoxModel.Option option = new ListBoxModel.Option("release","release",true);
             items.add(1,option);
